@@ -1,5 +1,8 @@
 package pizza;
 
 public class HomeDelivery implements DeliveryStrategy {
-    // TODO: implement deliver(Pizza pizza)
+    public void deliver(Pizza pizza) {
+        System.out.println("Delivery method: Home Delivery selected. " +
+                "Your pizza will arrive soon!\n");
+    }
 }
