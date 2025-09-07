@@ -5,4 +5,9 @@ public class HomeDelivery implements DeliveryStrategy {
         System.out.println("Delivery method: Home Delivery selected. " +
                 "Your pizza will arrive soon!\n");
     }
+
+    @Override
+    public String getName() {
+        return "Home delivery";
+    }
 }
