@@ -20,6 +20,7 @@ public class PizzaDemo {
         margherita = new PepperoniTopping(margherita);
         veggie = new CheeseTopping(veggie);
         veggie = new PepperoniTopping(veggie);
+        veggie = new OlivesTopping(veggie);
 
         System.out.println(margherita.getDescription() + " " + margherita.getCost() + "\n"
                 + veggie.getDescription() + " " + veggie.getCost() + "\n");
@@ -49,6 +50,8 @@ public class PizzaDemo {
         ToppingOptions t = new ToppingOptions();
         t.addTopping(new CheeseTopping(dummy));
         t.addTopping(new PepperoniTopping(dummy));
+        t.addTopping(new OlivesTopping(dummy));
+        t.addTopping(new MushroomsTopping(dummy));
 
         //Adds delivery methods to a list
         ArrayList<DeliveryStrategy> deliveryOptions = new ArrayList<>();
@@ -106,6 +109,10 @@ public class PizzaDemo {
                 chosenPizza = new CheeseTopping(chosenPizza);
             } else if (chosenTopping instanceof PepperoniTopping){
                 chosenPizza = new PepperoniTopping(chosenPizza);
+            } else if (chosenTopping instanceof OlivesTopping){
+                    chosenPizza = new OlivesTopping(chosenPizza);
+            } else if (chosenTopping instanceof MushroomsTopping){
+                    chosenPizza = new MushroomsTopping(chosenPizza);
             } else {
                 System.out.println("Unknown topping type. Try again.");
                 continue;
